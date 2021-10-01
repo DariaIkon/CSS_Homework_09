@@ -24,10 +24,10 @@ body {
   font-size: 18px;
 }
 .container {
-  max-width: 1200px;
+  max-width: 1140px;
   margin: 0 auto;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .logo {
   color: rgb(255, 255, 255);
@@ -57,7 +57,10 @@ body {
   color: rgb(255, 255, 255);
 }
 /* header */
-
+#burger_menu,
+#header_close {
+  display: none;
+}
 #header {
   background-color: rgb(235, 168, 177);
 }
@@ -78,7 +81,7 @@ body {
 }
 .header_menu_item {
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
   font-family: "Gilroy_Medium", sans-serif;
   color: rgb(119, 11, 29);
   position: relative;
@@ -163,7 +166,7 @@ body {
 #advantage_list {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 .advantage_item {
   position: relative;
@@ -196,7 +199,7 @@ body {
   font-family: "Gilroy_Medium", sans-serif;
   color: rgb(51, 25, 7);
   line-height: 1.333;
-  width: 209px;
+  width: 216px;
   margin-top: 20px;
 }
 
@@ -229,6 +232,7 @@ body {
   position: relative;
   margin-top: 142px;
   padding: 108px 0 27px;
+  box-sizing: border-box;
 }
 .products_img {
   position: absolute;
@@ -241,9 +245,10 @@ body {
 }
 .products_order {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin-top: 25px;
+  padding: 0 20px;
 }
 .products_price {
   max-width: 58px;
@@ -255,7 +260,7 @@ body {
 }
 .products_btn {
   width: 130px;
-  padding: 17px;
+  padding: 16px;
   font-size: 16px;
 }
 #order {
@@ -287,7 +292,7 @@ body {
   color: rgb(51, 25, 7);
   line-height: 1.556;
   text-align: left;
-  width: 400px;
+  max-width: 400px;
   margin-bottom: 48px;
 }
 #order_form {
@@ -317,6 +322,7 @@ body {
   padding: 22px 25px;
   box-sizing: border-box;
   background-color: inherit;
+  outline: 0;
 
   margin-bottom: 15px;
 }

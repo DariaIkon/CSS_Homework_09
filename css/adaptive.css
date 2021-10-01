@@ -8,27 +8,36 @@
     padding-top: 95px;
     padding-bottom: 60px;
   }
-  #advantage_main {
-    justify-content: center;
-  }
   #advantage_img img {
-    width: 400px;
-    height: 250px;
+    max-width: 486px;
   }
   #products_list {
     margin: 0 auto;
     flex-wrap: wrap;
-    width: 564px;
+    max-width: 728px;
+    justify-content: center;
+  }
+  .products_item {
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 /* 768 - 1024 */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
+  .container {
+    max-width: 728px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   #header_container {
-    justify-content: space-between;
+    justify-content: start;
   }
   #header_menu_list {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 100px;
+    margin-right: auto;
+  }
+  #header_contacts {
+    display: none;
   }
   #main_container {
     flex-direction: column;
@@ -50,11 +59,11 @@
   #advantage_info_title {
     text-align: center;
     margin: 0 auto 60px auto;
-    max-width: 648px;
+    max-width: 563px;
   }
   #advantage_info_text {
     text-align: center;
-    width: 666px;
+    max-width: 666px;
     margin-bottom: 40px;
   }
   #advantage_list {
@@ -70,6 +79,7 @@
   }
   .advantage_item_title {
     text-align: center;
+    font-size: 18px;
   }
   .advantage_item_text {
     text-align: center;
@@ -100,27 +110,34 @@
 /* 425px - 767px */
 
 @media screen and (max-width: 767px) {
-  #header_contacts {
-    display: none;
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
   }
   #header_container {
     justify-content: start;
   }
   #header_menu_list {
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: 0;
+    justify-content: space-evenly;
   }
+
   #main_container {
     padding-top: 80px;
+    align-items: center;
   }
   #main_info {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
   }
   #main_info h1 {
     text-align: center;
     font-size: 32px;
     margin-bottom: 40px;
+    max-width: 400px;
   }
   #main_info_text {
     text-align: center;
@@ -135,46 +152,101 @@
   #main_img img {
     width: 100%;
   }
-  /* #advantage_list {
-    width: 435px;
-    margin: 0 auto;
-  } */
   #advantage_list {
-    justify-content: center;
+    justify-content: space-around;
   }
   .advantage_item {
     margin-top: 45px;
+  }
+  #advantage_info_title {
+    font-size: 29px;
+    max-width: 415px;
   }
   #advantage_info_text {
     max-width: 354px;
     font-size: 16px;
     margin: 0 auto 40px auto;
   }
-
   #products_list {
     width: 100%;
     justify-content: center;
+  }
+  #products_title {
+    font-size: 35px;
+    max-width: 394px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #order_container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  #order_info_title {
+    font-size: 30px;
+    text-align: center;
+  }
+  #order_info_text {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 60px;
   }
   #order_macaroon {
     display: none;
   }
   #order_strawberry_big {
-    top: -236px;
-    left: -180px;
+    top: -245px;
+    left: -75px;
+  }
+  #order input {
+    width: 100%;
+  }
+  #order_form_btn {
+    width: 100%;
   }
   #order_strawberry_small {
     display: none;
   }
+  #order_img {
+    max-width: 0;
+  }
+  #order_info_title {
+    font-size: 30px;
+  }
+  #order_info_text {
+    font-size: 16px;
+  }
   #footer_container {
     flex-direction: column;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 100px;
   }
+  #footer_logo {
+    order: 1;
+  }
+  #footer_logo,
+  #footer_contacts {
+    margin-bottom: 40px;
+  }
+
   #footer_rights {
-    order: 4;
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+  }
+  #footer_social {
+    order: 3;
   }
   #footer_contacts {
     order: 2;
   }
 }
+
+/* 375 -423 */
+
 @media screen and (max-width: 424px) {
   #header_container {
     justify-content: space-between;
@@ -196,10 +268,10 @@
   }
   .header_menu_item {
     margin: 15px 5px;
+    color: #ffffff;
   }
   #burger_menu {
     display: block;
-    margin-right: 20px;
   }
   #burger_menu svg {
     width: 36px;
@@ -213,36 +285,25 @@
     display: block;
     width: 24px;
     height: 24px;
-    fill: rgb(130, 19, 40);
+    fill: #ffffff;
     position: absolute;
     top: 44px;
     left: 320px;
   }
-  .advantage_item_text {
-    width: 150px;
+  .advantage_item .advantage_item_text {
+    max-width: 156px;
     font-size: 13px;
   }
   #order_container {
     justify-content: center;
   }
-  #order_info_title {
-    font-size: 30px;
-    text-align: center;
-  }
-  #order_info_text {
-    font-size: 16px;
-    text-align: center;
-    margin-bottom: 60px;
-  }
 }
 @media screen and (max-width: 374px) {
-  #advantage_info_title {
-    font-size: 29px;
-  }
   #advantage_info_text {
     max-width: 323px;
   }
-  #products_title {
-    font-size: 35px;
+  #order_info_title,
+  #order_info_text {
+    text-align: left;
   }
 }

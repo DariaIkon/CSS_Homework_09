@@ -135,7 +135,10 @@
                     </div>
                     <div class="products_title">Макарун с малиной</div>
                     <div class="products_order">
-                        <div class="products_price">1 шт. 1,70 руб.</div>
+                        <div class="products_price">
+                           <div>1 шт.</div> 
+                           <div>1,70 руб.</div>
+                        </div>
                         <button class="products_btn btn">Заказать</button>
                     </div>
                 </div>
@@ -145,7 +148,10 @@
                     </div>
                     <div class="products_title">Макарун с манго</div>
                     <div class="products_order">
-                        <div class="products_price">1 шт. 1,70 руб.</div>
+                        <div class="products_price">
+                           <div>1 шт.</div> 
+                           <div>1,70 руб.</div>
+                        </div>
                         <button class="products_btn btn">Заказать</button>
                     </div>
                 </div>
@@ -155,7 +161,10 @@
                     </div>
                     <div class="products_title">Пирог с ванилью</div>
                     <div class="products_order">
-                        <div class="products_price">1 шт. 1,70 руб.</div>
+                        <div class="products_price">
+                           <div>1 шт.</div> 
+                           <div>1,70 руб.</div>
+                        </div>
                         <button class="products_btn btn">Заказать</button>
                     </div>
                 </div>
@@ -165,7 +174,10 @@
                     </div>
                     <div class="products_title">Пирог с фисташками</div>
                     <div class="products_order">
-                        <div class="products_price">1 шт. 1,70 руб.</div>
+                        <div class="products_price">
+                           <div>1 шт.</div> 
+                           <div>1,70 руб.</div>
+                        </div>
                         <button class="products_btn btn">Заказать</button>
                     </div>
                 </div>
@@ -225,7 +237,7 @@
             document.getElementById('header_menu_list').classList.add('open');
         }
         document.querySelectorAll('#header_menu_list > *').forEach((item) => {
-            item.onсlick = () => {
+            item.onclick = () => {
                 document.getElementById('header_menu_list').classList.remove('open');
             }
         })
