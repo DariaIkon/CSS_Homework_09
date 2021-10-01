@@ -122,7 +122,9 @@
     margin-right: 0;
     justify-content: space-evenly;
   }
-
+  .header_menu_item {
+    font-size: 13px;
+  }
   #main_container {
     padding-top: 80px;
     align-items: center;
