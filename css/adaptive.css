@@ -64,7 +64,7 @@
   #advantage_info_text {
     text-align: center;
     max-width: 666px;
-    margin-bottom: 40px;
+    margin: 0 auto 40px auto;
   }
   #advantage_list {
     flex-wrap: wrap;
@@ -86,18 +86,24 @@
   }
   #order_container {
     flex-direction: row-reverse;
-    justify-content: space-evenly;
+    justify-content: left;
+    position: relative;
   }
   #order_img {
     margin-right: 0;
-    width: 365px;
+    position: absolute;
+    max-width: 315px;
+    top: 390px;
+    right: 77px;
   }
   #order_macaroon {
     width: 100%;
     margin-bottom: -315px;
   }
   #order_strawberry_big {
-    top: -50px;
+    top: -40px;
+    left: -35px;
+    max-width: 70px;
   }
   #order_strawberry_small {
     top: -200px;
@@ -174,8 +180,7 @@
     justify-content: center;
   }
   #products_title {
-    font-size: 35px;
-    max-width: 394px;
+    font-size: 30px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -186,25 +191,25 @@
 
   #order_info_title {
     font-size: 30px;
-    text-align: center;
+    text-align: left;
   }
   #order_info_text {
     font-size: 16px;
-    text-align: center;
+    text-align: left;
     margin-bottom: 60px;
   }
   #order_macaroon {
     display: none;
   }
   #order_strawberry_big {
-    top: -245px;
-    left: -75px;
+    top: -170px;
+    left: -50px;
   }
   #order input {
-    width: 100%;
+    max-width: 100%;
   }
   #order_form_btn {
-    width: 100%;
+    max-width: 100%;
   }
   #order_strawberry_small {
     display: none;
