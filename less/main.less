@@ -1,0 +1,401 @@
+@main-white-color: #ffffff;
+@main-color_for-text: rgb(51, 25, 7);
+@color-for-link: rgb(119, 11, 29);
+@bg-color-deep-pink: rgb(235, 168, 177);
+@burgundy-color: rgb(130, 19, 40);
+@bg-color-light-pink: rgb(255, 239, 239);
+@bg-color-footer: rgb(192, 112, 124);
+@placeholder-color: rgb(118, 12, 34);
+.container() {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@font-face {
+  font-family: "Tavolga_Free";
+  src: url(../fonts/Tavolga_Free.ttf);
+}
+@font-face {
+  font-family: "Gilroy_Regular";
+  src: url(../fonts/gilroy_regular.ttf);
+}
+@font-face {
+  font-family: "Gilroy_Medium";
+  src: url(../fonts/gilroy_medium.ttf);
+}
+@font-face {
+  font-family: "Gilroy_Bold";
+  src: url(../fonts/gilroy_bold.ttf);
+}
+@font-face {
+  font-family: "Gilroy_Extra_Bold";
+  src: url(../fonts/gilroy_extra_bold.ttf);
+}
+body {
+  margin: 0;
+  font-family: "Tavolga_Free", sans-serif;
+  font-size: 18px;
+}
+.logo {
+  color: @main-white-color;
+  text-transform: uppercase;
+}
+.btn {
+  background-image: -moz-linear-gradient(
+    90deg,
+    rgb(113, 8, 30) 0%,
+    rgb(215, 72, 92) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    90deg,
+    rgb(113, 8, 30) 0%,
+    rgb(215, 72, 92) 100%
+  );
+  background-image: -ms-linear-gradient(
+    90deg,
+    rgb(113, 8, 30) 0%,
+    rgb(215, 72, 92) 100%
+  );
+  border-radius: 35px;
+  outline: 0;
+  border: 0;
+  font-size: 18px;
+  font-family: "Gilroy_Bold", sans-serif;
+  color: @main-white-color;
+}
+
+/* header */
+
+#header {
+  background-color: @bg-color-deep-pink;
+  #header_container {
+    .container();
+    padding-top: 35px;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    #header_menu_list {
+      width: 313px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 230px;
+      margin-right: 325px;
+      .header_menu_item {
+        text-decoration: none;
+        font-size: 14px;
+        font-family: "Gilroy_Medium", sans-serif;
+        color: @color-for-link;
+        position: relative;
+        &::before {
+          content: "";
+          display: none;
+          width: 100%;
+          background-color: @burgundy-color;
+          height: 2px;
+          position: absolute;
+          bottom: -3px;
+          left: 0;
+          &:hover::before {
+            display: block;
+          }
+        }
+      }
+    }
+    #header_contacts {
+      text-decoration: none;
+      font-size: 16px;
+      font-family: "Gilroy_Bold", sans-serif;
+      color: @main-white-color;
+      font-weight: bold;
+    }
+  }
+  #burger_menu,
+  #header_close {
+    display: none;
+  }
+}
+
+/* main */
+
+#main_container {
+  .container();
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 125px;
+  padding-bottom: 145px;
+  #main_info {
+    h1 {
+      margin: 0;
+      font-size: 55px;
+      color: @main-white-color;
+      line-height: 1.091;
+      text-align: left;
+      margin-bottom: 61px;
+      max-width: 600px;
+    }
+    #main_info_text {
+      color: @main-white-color;
+      line-height: 1.389;
+      text-align: left;
+      max-width: 345px;
+      margin-bottom: 85px;
+    }
+    #main_info_btn {
+      width: 240px;
+      padding: 20px;
+    }
+  }
+}
+
+/* advantage */
+
+#advantage {
+  background-color: @bg-color-light-pink;
+  #advantage_container {
+    .container();
+    padding-top: 120px;
+    padding-bottom: 120px;
+    #advantage_main {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 80px;
+      #advantage_info {
+        #advantage_info_title {
+          font-size: 45px;
+          color: @main-color_for-text;
+          line-height: 1.222;
+          max-width: 476px;
+          margin-bottom: 60px;
+        }
+        #advantage_info_text {
+          font-family: "Gilroy_Regular";
+          color: @main-color_for-text;
+          line-height: 1.556;
+          text-align: left;
+          width: 397px;
+        }
+      }
+    }
+    #advantage_list {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      .advantage_item {
+        position: relative;
+        .advantage_circle {
+          border-radius: 50%;
+          background-color: @burgundy-color;
+          position: absolute;
+          width: 70px;
+          height: 70px;
+          position: relative;
+          .advantage_circle_number {
+            font-size: 60px;
+            font-family: "Gilroy_Extra_Bold", sans-serif;
+            color: @main-white-color;
+            position: absolute;
+            left: 18px;
+            bottom: -18px;
+            margin: 0;
+          }
+        }
+        .advantage_item_title {
+          font-size: 20px;
+          font-family: "Gilroy_Extra_Bold", sans-serif;
+          color: @main-color_for-text;
+          margin-top: 13px;
+        }
+        .advantage_item_text {
+          font-size: 15px;
+          font-family: "Gilroy_Medium", sans-serif;
+          color: @main-color_for-text;
+          line-height: 1.333;
+          width: 216px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+/* products */
+
+#products {
+  background-color: @bg-color-deep-pink;
+  #products_container {
+    .container();
+    padding-top: 117px;
+    padding-bottom: 117px;
+    #products_title {
+      font-size: 45px;
+      color: @main-white-color;
+      text-align: center;
+    }
+    #products_list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .products_item {
+        border-width: 2px;
+        border-color: @main-white-color;
+        border-style: solid;
+        border-radius: 20px;
+        width: 263px;
+        position: relative;
+        margin-top: 142px;
+        padding: 108px 0 27px;
+        box-sizing: border-box;
+        .products_img {
+          position: absolute;
+          left: 35px;
+          top: -60px;
+        }
+        .products_title {
+          color: @main-white-color;
+          text-align: center;
+        }
+        .products_order {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 25px;
+          padding: 0 20px;
+          .products_price {
+            font-size: 15px;
+            font-family: "Gilroy_Regular", sans-serif;
+            line-height: 1.7;
+            color: @main-white-color;
+            text-align: left;
+          }
+          .products_btn {
+            width: 130px;
+            padding: 16px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// order
+
+#order {
+  background-color: @bg-color-light-pink;
+  #order_container {
+    .container();
+    padding-top: 96px;
+    padding-bottom: 120px;
+    display: flex;
+    align-items: center;
+    #order_img {
+      position: relative;
+      margin-right: 161px;
+      margin-bottom: -140px;
+      #order_strawberry_big {
+        position: absolute;
+        left: -50px;
+        top: -30px;
+      }
+    }
+    #order_info {
+      #order_info_title {
+        font-size: 45px;
+        color: @main-color_for-text;
+        margin-bottom: 42px;
+      }
+      #order_info_text {
+        font-family: "Gilroy_Regular", sans-serif;
+        color: @main-color_for-text;
+        line-height: 1.556;
+        text-align: left;
+        max-width: 400px;
+        margin-bottom: 48px;
+      }
+      #order_info_choose {
+        margin-bottom: 25px;
+      }
+      #order_form {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        #order_strawberry_small {
+          position: absolute;
+          bottom: 80px;
+          right: 0;
+          width: 50px;
+          height: 66px;
+        }
+        #order_form_btn {
+          border-radius: 30px;
+          width: 295px;
+          padding: 21px;
+        }
+      }
+      .order_form_title {
+        font-family: "Gilroy_Bold", sans-serif;
+        color: rgb(18, 10, 6);
+        margin-bottom: 20px;
+      }
+    }
+    input {
+      border-width: 1px;
+      border-color: @burgundy-color;
+      border-style: solid;
+      border-radius: 30px;
+      width: 293px;
+      padding: 22px 25px;
+      box-sizing: border-box;
+      background-color: inherit;
+      outline: 0;
+
+      margin-bottom: 15px;
+    }
+    ::placeholder {
+      font-size: 15px;
+      font-family: "Gilroy_Bold", sans-serif;
+      color: @placeholder-color;
+      font-weight: bold;
+      line-height: 5.333;
+      text-align: left;
+    }
+  }
+}
+
+/* footer  */
+
+#footer {
+  background-color: @bg-color-footer;
+  font-size: 16px;
+  font-family: "Gilroy_Bold", sans-serif;
+  color: @main-white-color;
+  #footer_container {
+    .container();
+    padding-top: 73px;
+    padding-bottom: 63px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    #footer_rights {
+      font-size: 12px;
+      font-family: "Gilroy_Regular";
+      color: rgb(227, 172, 180);
+      text-align: left;
+      margin-top: 19px;
+    }
+    #footer_social {
+      text-align: center;
+      #footer_icon {
+        margin-bottom: 13px;
+      }
+    }
+  }
+}
+
+@import url(../less/adaptive.less);
+@import url(../less/theme.less);
