@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS_Homework_09</title>
-    <link rel="stylesheet/less" href="./less/main.less">
+    <link rel="stylesheet" href="./dist/main.min.css">
+    <!-- <link rel="stylesheet/less" href="./less/main.less"> -->
     <script src="https://cdn.jsdelivr.net/npm/less@4"></script>
 </head>
 <body>
@@ -232,6 +233,8 @@
         </div>
     </div>
 
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./index.js"></script>
     <script>
         document.getElementById('burger_menu').onclick = function () {
             document.getElementById('header_menu_list').classList.add('open');
